@@ -91,38 +91,61 @@
             </div>
         </section>
 
-        <section class="flow" id="interactive-elements">
+        <section class="flow" id="interactive-elements" >
             <h2 class="numbered-title"><span>03</span> Interactive elements</h2>
 
             <!-- navigation -->
-            <div >
-                <nav>
-                    <ul class="primary-navigation underline-indicators flex">
+            <div class="navigation" >
+                <nav >
+                    <ul class="primary-navigation underline-indicators flex" >
                         <li class="active"><a class="uppercase text-white letter-spacing-2" href="#"><span>01</span>Active</a></li>
                         <li><a class="uppercase text-white letter-spacing-2" href="#"><span>02</span>Hovered</a></li>
                         <li><a class="uppercase text-white letter-spacing-2" href="#"><span>03</span>Idle</a></li>
                     </ul>
                 </nav>
+                <p >Different States of Navigation Bar</p>
             </div>
 
-            <div class="flex">
+            <div class="flex" >
+                <div class="inline-block">
                 <div style="margin-top: 5rem;">
-                    <!-- explore button -->
+                    <!-- explore button idle-->
                     <a href="#" class="large-button uppercase ff-serif fs-600 text-dark bg-white">Explore</a>
                 </div>
+                <p class="text-accent">Landing Page Main Button-idle</p>
 
-                <div style="margin-bottom: 50vh">
-                    <!-- Tabs -->
-                    <div class="tab flex" >
-                        <button  class="uppercase text-accent  ff-sans-cond bg-dark letter-spacing-2">Moon</button>
-                        <button class="uppercase text-accent  ff-sans-cond bg-dark letter-spacing-2">Mars</button>
-                        <button class="uppercase text-accent  ff-sans-cond bg-dark letter-spacing-2">Europa</button>
+                <div style="margin-top: 5rem;">
+                    <!-- explore button hover-->
+                    <a href="#" class="large-button-2 uppercase ff-serif fs-600 text-dark bg-white">Explore</a>
+                </div>
+                <p class="text-accent">Landing Page Main Button-hover</p>
+                </div>
+
+                <div class="flow" style="flex-basis: 100%; --flow-space: 4rem;">
+                    <div  class="" style="margin: 50px ;display:block; text-align:center" >
+                        <!-- Tabs -->
+                        <div class="tab-list underline-indicators " style="padding:  var(--underline-gap, 1rem) 0; " >
+                            <button  aria-selected="true" class="uppercase text-accent  ff-sans-cond bg-dark letter-spacing-2">Moon</button>
+                            <button aria-selected="false" class="uppercase text-accent  ff-sans-cond bg-dark letter-spacing-2">Mars</button>
+                            <button aria-selected="false" class="uppercase text-accent  ff-sans-cond bg-dark letter-spacing-2">Europa</button>
+                        </div>
+                        <p class="text-accent">Tabs (Active, Hover, & Idle)</p>
+                        <!-- Dots -->
+                        <div class="dot-indicators flex " style="margin-top:30px" >
+                            <button  aria-selected="true" ><span class="sr-only">Slide title</span></button>
+                            <button aria-selected="false" ><span class="sr-only">Slide title </span></button>
+                            <button aria-selected="false" ><span class="sr-only">Slide title</span></button>
+                        </div>
+                        <p class="text-accent">Slider 1 States (Active, Hover, & Idle)</p>
+
+                        <!-- Numbers -->
+                        <div class="number-indicators">
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                        </div>
+                        <p class="text-accent">Slider 2 States (Active, Hover, & Idle)</p>
                     </div>
-                    
-
-                    <!-- Dots -->
-
-                    <!-- Numbers -->
                 </div>
             </div>
         </section>
