@@ -13,7 +13,7 @@
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body class="home">
-
+  <a href="#main" class="skip-to-content">Skip to content</a>
 <header class="primary-header flex">
     <div>
       <img src="./assets/shared/logo.svg" alt="spaces tourism logo" class="logo">
@@ -28,14 +28,16 @@
 
      <nav >
       <ul id="primary-navigation" data-visiblity="false" class="primary-navigation  underline-indicators flex" >
-        <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span>01</span>Home</a></li>
-        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span>02</span>Destination</a></li>
-        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span>03</span>Crew</a></li>
-        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span>03</span>Technology</a></li>
+        <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>Destination</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Crew</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Technology</a></li>
       </ul>
     </nav>  
+    <!-- my::after is here -->
 </header>
-  <div class="grid-container grid-container--home" >
+
+<main  id="main" class="grid-container grid-container--home">
         <div>
           <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">So, you want to travel to
             <span class=" d-block fs-900 ff-serif text-white">Space</span></h1>
@@ -48,8 +50,7 @@
         <!-- explore button hover-->
         <a href="#" class="large-button-2 uppercase ff-serif text-dark bg-white" >Explore</a>
         </div>
-  </div>
-  
+</main>
 <script src="index.js"></script>
 </body>
 </html>
