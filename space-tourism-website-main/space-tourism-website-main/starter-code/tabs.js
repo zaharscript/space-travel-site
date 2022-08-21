@@ -1,4 +1,4 @@
-const tabList = document.querySelector('[role="tabList"]');
+const tabList = document.querySelector('[role="tablist"]');
 const tabs = tabList.querySelectorAll('[role="tab"]');
 
 
@@ -36,11 +36,34 @@ function changeTabFocus(e){
         }
     }
 
-tabs[tabFocus].setAttribute("tabindex", 0);
-tabs[tabFocus].focus();
+    tabs[tabFocus].setAttribute("tabindex", 0);
+    tabs[tabFocus].focus();
 }
 
 function changeTabPanel(e) {
     const targetTab = e.target;
-    const targetPanel = targetTab.getAttribute();
+    const targetPanel = targetTab.getAttribute("aria-controls");
+    const targetImage = targetTab.getAttribute("data-image");
+
+    const tabContainer = targetTab.parentNode;
+    const mainContainer = tabContainer.parentNode;
+
+    tabContainer
+            .querySelector('[aria-selected="true"]')
+            .setAttribute("aria-selected", false);
+
+    targetTab.setAttribute("aria-selected",true);
+
+
+    mainContainer
+            .querySelectorAll('article')
+            .forEach((article) => article.setAttribute("hidden", true));
+
+    mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
+
+    mainContainer
+            .querySelectorAll('picture')
+            .forEach((picture) => picture.setAttribute("hidden", true));
+
+            mainContainer.querySelector([`#${targetImage}`]).removeAttribute('hidden');
 }
