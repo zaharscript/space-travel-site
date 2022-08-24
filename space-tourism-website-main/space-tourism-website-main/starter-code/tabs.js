@@ -48,22 +48,38 @@ function changeTabPanel(e) {
     const tabContainer = targetTab.parentNode;
     const mainContainer = tabContainer.parentNode;
 
+    //highlighting the active tab
     tabContainer
-            .querySelector('[aria-selected="true"]')
-            .setAttribute("aria-selected", false);
+        .querySelector('[aria-selected="true"]')
+        .setAttribute("aria-selected", false);
 
-    targetTab.setAttribute("aria-selected",true);
+        targetTab.setAttribute("aria-selected", true);
 
+    //changing article 
+    hideContent(mainContainer, '[role="tabpanel"]' );
+    showContent(mainContainer,[`#${targetPanel}`]);
+    // mainContainer
+    //         .querySelectorAll('[role="tabpanel"]')
+    //         .forEach((panel) => panel.setAttribute("hidden", true));
+    // mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
+   
+   
+    //changing picture
+    hideContent(mainContainer, 'picture');
+    showContent(mainContainer, [`#${targetImage}`]);
+    // mainContainer
+    //         .querySelectorAll('picture')
+    //         .forEach((picture) => picture.setAttribute("hidden", true));
+    // mainContainer.querySelector([`#${targetImage}`]).removeAttribute('hidden');
+   
+}
 
-    mainContainer
-            .querySelectorAll('article')
-            .forEach((article) => article.setAttribute("hidden", true));
+function hideContent(parent, content) {
+    parent
+        .querySelectorAll(content)
+        .forEach((item) => item.setAttribute("hidden", true));
+}
 
-    mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
-
-    mainContainer
-            .querySelectorAll('picture')
-            .forEach((picture) => picture.setAttribute("hidden", true));
-
-            mainContainer.querySelector([`#${targetImage}`]).removeAttribute('hidden');
+function showContent(parent, content){
+    parent.querySelector(content).removeAttribute('hidden');
 }
