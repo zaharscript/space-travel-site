@@ -39,8 +39,8 @@
 
   <div class="number-indicators">
     <button aria-selected="true" role="tab" aria-controls="vehicle-tab" tabindex="0" data-image="commander-image" class="active">1</button>
-    <button>2</button>
-    <button>3</button>
+    <button aria-selected="true" role="tab" aria-controls="vehicle-tab" tabindex="-1" data-image="commander-image" class="active">2</button>
+    <button aria-selected="true" role="tab" aria-controls="vehicle-tab" tabindex="-1" data-image="commander-image" class="active">3</button>
 </div>
   
 <!-- article -->
@@ -57,7 +57,7 @@
 </article>
 
 <!-- spaceport -->
-<article hidden>
+<article hidden class="technology-details flow" tabindex="0" role="tabpanel" id="spaceport-tab">
   <h2 class="uppercase ff-sans-cond text-accent letter-spacing-2">The terminology...</h2>
   <p class="fs-700 uppercase ff-serif">Spaceport</p>
 
@@ -69,7 +69,7 @@
 </article>
 
 <!-- capsule -->
-<article hidden>
+<article hidden class="technology-details flow" tabindex="0" role="tabpanel" id="capsule-tab">
   <h2 class="uppercase ff-sans-cond text-accent letter-spacing-2">The terminology...</h2>
   <p class="fs-700 uppercase ff-serif">Capsule</p>
 
@@ -82,7 +82,7 @@
 
 <!-- picture -->
 <picture>
-  <img src="assets/technology/image-launch-vehicle-portrait.jpg" alt="">
+  <img src="assets/technology/image-launch-vehicle-landscape.jpg" alt="">
 </picture>
 
 <picture hidden>

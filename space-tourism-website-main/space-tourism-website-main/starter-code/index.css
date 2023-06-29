@@ -727,9 +727,10 @@ body {
     grid-area: image;
     max-width: 60%;
     border-bottom: 1px solid hsl( var(--clr-white) / .1);
+    background-image: url(./assets/technology/image-launch-vehicle-landscape.jpg);
 }
 
-.grid-container--technology > .dot-indicators {
+.grid-container--technology > .number-indicators {
     grid-area: tabs;
 }
 
@@ -761,6 +762,9 @@ body {
             'image';
     }
     
+    .number-indicators {
+        flex-direction:row;
+    }
     
 }
 
@@ -810,8 +814,8 @@ body {
             '. tabs image .';
     }
     
-    .grid-container--technology > .dot-indicators {
-        justify-self: start;
+    .grid-container--technology > .number-indicators {
+        justify-self:flex-starts;
     }
     
     /* .grid-container--crew > picture {
