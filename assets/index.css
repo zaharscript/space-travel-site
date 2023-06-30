@@ -725,9 +725,9 @@ body {
 
 .grid-container--technology > picture {
     grid-area: image;
-    max-width: 60%;
+    max-width: 100%;
     border-bottom: 1px solid hsl( var(--clr-white) / .1);
-    background-image: url(./assets/technology/image-launch-vehicle-landscape.jpg);
+   
 }
 
 .grid-container--technology > .number-indicators {
@@ -740,6 +740,10 @@ body {
 
 .technology-details h2 {
     color: hsl( var(--clr-white) / .5);
+}
+
+.number-indicators {
+    
 }
 
 @media (min-width: 35em) {
